@@ -1,0 +1,6 @@
+import{c as e}from"./index-CjV0R1vB.js";/**
+ * @license lucide-react v0.462.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const a=e("Award",[["path",{d:"m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526",key:"1yiouv"}],["circle",{cx:"12",cy:"8",r:"6",key:"1vp47v"}]]),i={name:"Suresh Sathyanarayanan",title:"Founder, Edsurance & UNS Groups",image:"/founder.png",bio:"A visionary with 23 years of experience, Suresh Sathyanarayanan has reshaped learning methodologies globally. He is the creator of Edsurance, a revolutionary software platform that champions scientific thinking in schools and empowers every child to think like a young scientist.",expertise:["Educationist & ELT Professional","AI-powered & Scientific Thinking–based Learning","Holistic Student Development & Mental Wellness","Wealth Coaching & Business Consulting"],quote:"Edsurance is the scientific soul of Indian education — designed to heal, designed to elevate, and designed to ignite a spark in every child who dreams of changing the world.",social:{linkedin:"https://www.linkedin.com/in/sureshsathyanarayanan",twitter:"https://x.com"}};export{a as A,i as f};
