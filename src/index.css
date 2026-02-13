@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 20% 98%;
+    --foreground: 270 50% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 270 50% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 50% 10%;
+
+    --primary: 270 70% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 175 60% 40%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 250 20% 94%;
+    --muted-foreground: 270 10% 45%;
+
+    --accent: 175 50% 92%;
+    --accent-foreground: 175 60% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 270 15% 90%;
+    --input: 270 15% 88%;
+    --ring: 270 70% 45%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 270 30% 97%;
+    --sidebar-foreground: 270 30% 20%;
+    --sidebar-primary: 270 70% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 175 50% 92%;
+    --sidebar-accent-foreground: 175 60% 25%;
+    --sidebar-border: 270 15% 90%;
+    --sidebar-ring: 270 70% 45%;
+
+    /* Custom tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(270 70% 45%), hsl(285 65% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(175 60% 40%), hsl(165 55% 50%));
+    --gradient-hero: linear-gradient(160deg, hsl(270 35% 97%), hsl(175 25% 96%), hsl(280 30% 97%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(270 20% 98%));
+    --gradient-cta: linear-gradient(135deg, hsl(270 70% 42%), hsl(285 60% 50%), hsl(260 70% 55%));
+    --shadow-soft: 0 4px 20px -4px hsl(270 30% 50% / 0.12);
+    --shadow-card: 0 8px 30px -8px hsl(270 30% 50% / 0.15);
+    --shadow-glow: 0 0 40px -10px hsl(270 70% 45% / 0.3);
+    --shadow-elevated: 0 20px 50px -12px hsl(270 40% 30% / 0.2);
+
+    --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  .dark {
+    --background: 270 30% 6%;
+    --foreground: 250 20% 95%;
+    --card: 270 25% 10%;
+    --card-foreground: 250 20% 95%;
+    --popover: 270 25% 10%;
+    --popover-foreground: 250 20% 95%;
+    --primary: 270 65% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 175 55% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 270 20% 15%;
+    --muted-foreground: 270 10% 60%;
+    --accent: 175 40% 15%;
+    --accent-foreground: 175 50% 70%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 270 20% 18%;
+    --input: 270 20% 18%;
+    --ring: 270 65% 60%;
+    --sidebar-background: 270 25% 8%;
+    --sidebar-foreground: 250 20% 90%;
+    --sidebar-primary: 270 65% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 175 40% 15%;
+    --sidebar-accent-foreground: 175 50% 70%;
+    --sidebar-border: 270 20% 18%;
+    --sidebar-ring: 270 65% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-cta {
+    background: var(--gradient-cta);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(270 70% 45%), hsl(175 60% 40%));
+  }
+
+  .text-gradient-purple {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(270 70% 45%), hsl(285 60% 60%));
+  }
+
+  .section-padding {
+    @apply px-4 py-16 sm:px-6 md:py-20 lg:px-8 lg:py-24 xl:py-28;
+  }
+
+  .container-tight {
+    @apply mx-auto max-w-7xl;
+  }
+
+  /* Decorative blob */
+  .blob {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    filter: blur(60px);
+    opacity: 0.15;
+    pointer-events: none;
+  }
+
+  .blob-primary {
+    background: hsl(270 70% 45%);
+  }
+
+  .blob-accent {
+    background: hsl(175 60% 40%);
+  }
+
+  /* Glass morphism card */
+  .glass {
+    background: hsl(0 0% 100% / 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(270 15% 90% / 0.5);
+  }
+
+  /* Feature card hover border glow */
+  .card-glow {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, hsl(270 70% 45% / 0.3), hsl(175 60% 40% / 0.3));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .card-glow:hover::before {
+    opacity: 1;
+  }
+
+  /* Trusted by ribbon */
+  .trust-badge {
+    @apply inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-muted-foreground shadow-soft;
+  }
+}
+
+@layer utilities {
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1.5;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-300;
+  }
+
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+}
