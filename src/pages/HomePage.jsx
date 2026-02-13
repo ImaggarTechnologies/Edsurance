@@ -70,7 +70,7 @@ const HomePage = () => {
               <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg" className="gradient-primary rounded-full px-8 text-lg text-primary-foreground shadow-glow transition-all hover:shadow-elevated hover:scale-105">
                   <Link to="/programs">
-                    Start Learning <ChevronRight className="ml-1 h-5 w-5" />
+                    Start Learning..! <ChevronRight className="ml-1 h-5 w-5" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="rounded-full border-2 border-border px-8 text-lg transition-all hover:border-primary hover:text-primary">
